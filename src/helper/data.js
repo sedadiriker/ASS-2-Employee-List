@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
       id: 'NaNNA463undefined',
       name: 'Väinö Perko',

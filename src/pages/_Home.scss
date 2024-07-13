@@ -1,6 +1,8 @@
 @import "../scss/variables.scss";
+@import "../scss/mixins.scss";
 
 .home{
     height: 100vh;
-    background-color: $bg-color;
+    background-color: $home-bg-color;
+    @include flex;
 }
