@@ -3,3 +3,12 @@
     justify-content: center;
     align-items: center;
 }
+@mixin buton{
+    background-color: $primary-bg-color;
+    padding: 12px 2rem;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

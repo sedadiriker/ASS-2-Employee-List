@@ -2,7 +2,7 @@
 @import "../scss/mixins.scss";
 
 .home{
-    height: 100vh;
-    background-color: $home-bg-color;
+    min-height: 100vh;
+    background-color: $primary-bg-color;
     @include flex;
 }
