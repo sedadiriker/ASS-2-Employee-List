@@ -11,11 +11,11 @@ const List = () => {
   );
 
   const nextPage = () => {
-    setCurrentPage(currentPage + 1);
+    setCurrentPage(currentPage < (data.length / workersPerPage) ? currentPage + 1 : currentPage);
   };
 
   const prevPage = () => {
-    setCurrentPage(currentPage - 1);
+    setCurrentPage(currentPage == 1 ? currentPage : currentPage - 1);
   };
   return (
     <div className="list">
@@ -23,7 +23,7 @@ const List = () => {
         <h3 className="title">Employee List</h3>
         <p>
           {" "}
-          Employess {(workersPerPage * currentPage)- workersPerPage + 1} to {workersPerPage * currentPage}
+          (Employess {(workersPerPage * currentPage)- workersPerPage + 1} to {workersPerPage * currentPage})
         </p>
       </div>
       <div className="employee-list">
@@ -39,8 +39,8 @@ const List = () => {
         ))}
       </div>
       <div className="btns">
-        <button>Prev</button>
-        <button>Next</button>
+        <button onClick={prevPage}>Prev</button>
+        <button onClick={nextPage}>Next</button>
       </div>
     </div>
   );
